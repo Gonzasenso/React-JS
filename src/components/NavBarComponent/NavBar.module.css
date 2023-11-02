@@ -1,0 +1,47 @@
+.encabezado{
+    background: linear-gradient(to right, #ff6600, #ffcc00);
+}
+
+.titulo{
+    font-size: 25px;
+    padding-left: 30px;
+    font-weight: bold;
+}
+
+.botonInicio{
+    font-size: 20px;
+}
+
+.botonProductos{
+    font-size: 20px;
+}
+
+.botonCategorias{
+    font-size: 20px;
+}
+
+.dropdownComponentes{
+    font-size: 20px;
+}
+
+.dropdownMonitores{
+    font-size: 20px;
+}
+
+.dropdownSillasGamer{
+    font-size: 20px;
+}
+
+.formulario{
+    display: flex;
+    padding-right: 30px;
+}
+
+.busqueda{
+    margin-right: 20px;
+}
+
+.botonBuscar{
+    font-size: 20px;
+}
+
