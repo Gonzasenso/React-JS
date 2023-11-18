@@ -6,12 +6,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidgetComponent from '../CartWidgetComponent/CartWidgetComponent';
 import estilos from "./NavBar.module.css";
+import { Link } from 'react-router-dom';
 
 const NavBarComponent= () => {
   return (
     <Navbar expand="lg" className={estilos.encabezado}>
       <Container fluid>
-        <Navbar.Brand className={estilos.titulo} href="#">GamerXtreme</Navbar.Brand>
+        <Navbar.Brand className={estilos.titulo}><Link to={"/"}>GamerXtreme</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -22,15 +23,10 @@ const NavBarComponent= () => {
             <Nav.Link className={estilos.botonInicio} href="#action1">Inicio</Nav.Link>
             <Nav.Link className={estilos.botonProductos} href="#action2">Productos</Nav.Link>
             <NavDropdown className={estilos.botonCategorias} title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item className={estilos.dropdownComponentes} href="#action3">Componentes</NavDropdown.Item>
-              <NavDropdown.Item className={estilos.dropdownMonitores} href="#action4">
-                Monitores
-              </NavDropdown.Item>
+              <NavDropdown.Item className={estilos.dropdownComponentes}><Link to={"/category/categoria1"}>Categoria 1</Link></NavDropdown.Item>
+              <NavDropdown.Item className={estilos.dropdownMonitores}><Link to={"/category/categoria2"}>Categoria 2</Link></NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item className={estilos.dropdownComponentes} href="#action5">
-                Sillas Gamer
-              </NavDropdown.Item>
-            </NavDropdown>
+              <NavDropdown.Item className={estilos.dropdownComponentes}><Link to={"/category/categoria3"}>Categoria Adicional</Link></NavDropdown.Item></NavDropdown>
           </Nav>
           <Form className={estilos.formulario}>
             <Form.Control
