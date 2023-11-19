@@ -12,12 +12,12 @@ const Category = () => {
   
  useEffect(() => {
 axios
-.get("https://dummyjson.com/products")
+.get(`https://dummyjson.com/products/category/${categoryId}`)
 .then((res) => {
 setProducts(res.data.products);
 })
 .catch((error) => console.log(error));
-  }, []);
+  }, [categoryId]);
 
  
 

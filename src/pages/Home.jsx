@@ -1,14 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import ItemListContainer from "../components/ItemListContainer/ItemListContainer"
+import ItemListContainer from "../components/ItemListContainer/ItemListContainer";
 
 const Home = () => {
     const [products, setProducts] = useState([]);
 
   useEffect(() => {
 axios
-.get("https://dummyjson.com/products")
+.get("https://dummyjson.com/products/?limit=20")
 .then((res) => {
 setProducts(res.data.products);
 })
@@ -19,4 +19,4 @@ setProducts(res.data.products);
   return <ItemListContainer products={products}/>;
 };
 
-export default Home
+export default Home;

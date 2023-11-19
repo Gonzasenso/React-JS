@@ -7,8 +7,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidgetComponent from '../CartWidgetComponent/CartWidgetComponent';
 import estilos from "./NavBar.module.css";
 import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const NavBarComponent= () => {
+const [categories, setCategories] = useState([]);
+useEffect(() => {
+axios.get("https://dummyjson.com/products/categories").then(res => setCategories(res.data)).catch(error => console.log(error));
+  
+},[])
+  
+  
   return (
     <Navbar expand="lg" className={estilos.encabezado}>
       <Container fluid>
@@ -23,10 +32,17 @@ const NavBarComponent= () => {
             <Nav.Link className={estilos.botonInicio} href="#action1">Inicio</Nav.Link>
             <Nav.Link className={estilos.botonProductos} href="#action2">Productos</Nav.Link>
             <NavDropdown className={estilos.botonCategorias} title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item className={estilos.dropdownComponentes}><Link to={"/category/categoria1"}>Categoria 1</Link></NavDropdown.Item>
-              <NavDropdown.Item className={estilos.dropdownMonitores}><Link to={"/category/categoria2"}>Categoria 2</Link></NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item className={estilos.dropdownComponentes}><Link to={"/category/categoria3"}>Categoria Adicional</Link></NavDropdown.Item></NavDropdown>
+              {
+                categories.map((category, index)=>{
+                  return(
+                    <NavDropdown.Item key={index} className={estilos.dropdownComponentes}>
+                      <Link to={`/category/${category}`}>{category}</Link>
+                      </NavDropdown.Item>
+                  );
+                
+              })}
+          
+             </NavDropdown> 
           </Nav>
           <Form className={estilos.formulario}>
             <Form.Control
