@@ -21,7 +21,7 @@ axios.get("https://dummyjson.com/products/categories").then(res => setCategories
   return (
     <Navbar expand="lg" className={estilos.encabezado}>
       <Container fluid>
-        <Navbar.Brand className={estilos.titulo}><Link to={"/"}>GamerXtreme</Link></Navbar.Brand>
+        <Navbar.Brand className={estilos.titulo}><Link className={estilos.link} to={"/"}>GamerXtreme</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -29,14 +29,14 @@ axios.get("https://dummyjson.com/products/categories").then(res => setCategories
             style={{ maxHeight: '100px', paddingLeft: `50px` }}
             navbarScroll
           >
-            <Nav.Link className={estilos.botonInicio} href="#action1">Inicio</Nav.Link>
-            <Nav.Link className={estilos.botonProductos} href="#action2">Productos</Nav.Link>
+            <Nav.Link className={estilos.botonInicio} style={{fontSize: `20px`}} href="#Inicio">Inicio</Nav.Link> 
+            <Nav.Link className={estilos.botonProductos} style={{fontSize: `20px`}} href="#Productos">Productos</Nav.Link>
             <NavDropdown className={estilos.botonCategorias} title="Categorias" id="navbarScrollingDropdown">
               {
                 categories.map((category, index)=>{
                   return(
                     <NavDropdown.Item key={index} className={estilos.dropdownComponentes}>
-                      <Link to={`/category/${category}`}>{category}</Link>
+                      <Link className={estilos.linkCategorias} to={`/category/${category}`}>{category}</Link>
                       </NavDropdown.Item>
                   );
                 

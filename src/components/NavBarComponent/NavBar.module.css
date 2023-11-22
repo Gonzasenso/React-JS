@@ -6,11 +6,19 @@
     font-size: 25px;
     padding-left: 30px;
     font-weight: bold;
+    
+}
+
+.link{
+    text-decoration: none;
+    color: black;
 }
 
 .botonInicio{
     font-size: 20px;
 }
+
+
 
 .botonProductos{
     font-size: 20px;
@@ -20,17 +28,16 @@
     font-size: 20px;
 }
 
+.linkCategorias{
+    text-decoration: none;
+    color: black;
+}
+
 .dropdownComponentes{
     font-size: 20px;
 }
 
-.dropdownMonitores{
-    font-size: 20px;
-}
 
-.dropdownSillasGamer{
-    font-size: 20px;
-}
 
 .formulario{
     display: flex;
