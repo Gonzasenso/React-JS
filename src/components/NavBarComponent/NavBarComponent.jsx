@@ -59,6 +59,5 @@ axios.get("https://dummyjson.com/products/categories").then(res => setCategories
     </Navbar>
     
   );
-}
+};
 
-export default NavBarComponent;

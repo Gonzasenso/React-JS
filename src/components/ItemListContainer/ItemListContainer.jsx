@@ -32,4 +32,3 @@ return (
 );
 };
 
-export default ItemListContainer;
