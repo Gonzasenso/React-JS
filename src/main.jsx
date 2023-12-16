@@ -9,16 +9,16 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBOakSQ9D7ELRwXuwlQt7ARGD5a10n2jpQ",
-  authDomain: "gamextreme-react.firebaseapp.com",
-  projectId: "gamextreme-react",
-  storageBucket: "gamextreme-react.appspot.com",
-  messagingSenderId: "949897888619",
-  appId: "1:949897888619:web:59d66973228bb329a1022e"
+  apiKey: "AIzaSyC23AyW7PtGpOs6QZ1nUFSp02JnovJX-9Q",
+  authDomain: "gamextreme-react-f5571.firebaseapp.com",
+  projectId: "gamextreme-react-f5571",
+  storageBucket: "gamextreme-react-f5571.appspot.com",
+  messagingSenderId: "612390559699",
+  appId: "1:612390559699:web:c0c437cb2c7a04edaa1926"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

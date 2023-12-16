@@ -11,7 +11,7 @@ export const LoaderComponent = () => {
         width: "100vw",
       }}
     >
-      <l-helix size="70" speed="2.5" color="white"></l-helix>
+      <l-helix size="70" speed="2.5" color="black"></l-helix>
     </div>
   );
 };

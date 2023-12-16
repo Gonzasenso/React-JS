@@ -1,11 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-import {MainRouter} from "./routes/MainRouter";
+import {MainRouter} from "./router/MainRouter";
 
 import { CartProvider } from "./context";
 
-function App() {
+const App = () => {
   return (
     <div>
       <CartProvider>
