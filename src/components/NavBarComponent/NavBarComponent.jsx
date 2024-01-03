@@ -8,6 +8,7 @@ import estilos from "./NavBar.module.css";
 
 
 export const NavBarComponent= () => {
+
   return (
     <Navbar expand="lg" className={estilos.encabezado}>
       <Container fluid>
@@ -36,7 +37,7 @@ export const NavBarComponent= () => {
               </NavDropdown.Item>
              </NavDropdown> 
           </Nav>
-          <CartWidgetComponent/>
+          <CartWidgetComponent />
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -2,7 +2,7 @@ import React from "react";
 import { useAllProducts } from "../hooks/useProducts";
 import { LoaderComponent, ItemListContainer } from "../components";
 
-export const Home = () => {
+export const Inicio = () => {
   const { products, loading, error } = useAllProducts();
 
   return (
