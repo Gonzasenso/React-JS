@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import estilos from "./NavBar.module.css";
 
 
-export const NavBarComponent= () => {
+export const NavBarComponent = () => {
 
   return (
     <Navbar expand="lg" className={estilos.encabezado}>
@@ -20,27 +20,27 @@ export const NavBarComponent= () => {
             style={{ maxHeight: '100px', paddingLeft: `50px` }}
             navbarScroll
           >
-            <Nav.Link className={estilos.botonInicio} style={{fontSize: `20px`}} href="#Inicio"><Link className={estilos.link} to={"/"} >Inicio</Link></Nav.Link> 
+            <Nav.Link className={estilos.botonInicio} style={{ fontSize: `20px` }} href="#Inicio"><Link className={estilos.link} to={"/"} >Inicio</Link></Nav.Link>
             <NavDropdown className={estilos.botonCategorias} title="Categorias" id="navbarScrollingDropdown">
-              
+
               <NavDropdown.Item href="#Teclados" className={estilos.dropdownComponentes}>
-                      <Link className={estilos.linkCategorias} to={"/category/Teclados"}>Teclados</Link>
+                <Link className={estilos.linkCategorias} to={"/category/Teclados"}>Teclados</Link>
               </NavDropdown.Item>
-                
+
               <NavDropdown.Item href="#Monitores" className={estilos.dropdownComponentes}>
-                      <Link className={estilos.linkCategorias} to={"/category/Monitores"}>Monitores</Link>
+                <Link className={estilos.linkCategorias} to={"/category/Monitores"}>Monitores</Link>
               </NavDropdown.Item>
 
               <NavDropdown.Item href="#Auriculares" className={estilos.dropdownComponentes}>
-                      <Link className={estilos.linkCategorias} to={"/category/Auriculares"}>Auriculares</Link>
+                <Link className={estilos.linkCategorias} to={"/category/Auriculares"}>Auriculares</Link>
               </NavDropdown.Item>
-             </NavDropdown> 
+            </NavDropdown>
           </Nav>
           <CartWidgetComponent />
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    
+
   );
 };
 

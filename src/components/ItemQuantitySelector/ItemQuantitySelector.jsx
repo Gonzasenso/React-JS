@@ -27,9 +27,9 @@ export const ItemQuantitySelector = () => {
   return (
     <div>
       <Button onClick={handleSubstractProduct}>-</Button>
-      <input type="number" value={quantity} disabled/>
+      <input type="number" value={quantity} disabled />
       <Button onClick={handleAddProduct}>+</Button>
-      <AddItemButton quantity={quantity} handleResetQuantity={handleResetQuantity}/>
+      <AddItemButton quantity={quantity} handleResetQuantity={handleResetQuantity} />
     </div>
   );
 };

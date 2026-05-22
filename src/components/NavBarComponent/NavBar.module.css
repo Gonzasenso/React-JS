@@ -1,54 +1,53 @@
-.encabezado{
+.encabezado {
     background: linear-gradient(to right, #ff6600, #ffcc00);
 }
 
-.titulo{
+.titulo {
     font-size: 25px;
     padding-left: 30px;
     font-weight: bold;
-    
+
 }
 
-.link{
+.link {
     text-decoration: none;
     color: black;
 }
 
-.botonInicio{
+.botonInicio {
     font-size: 20px;
 }
 
 
 
-.botonProductos{
+.botonProductos {
     font-size: 20px;
 }
 
-.botonCategorias{
+.botonCategorias {
     font-size: 20px;
 }
 
-.linkCategorias{
+.linkCategorias {
     text-decoration: none;
     color: black;
 }
 
-.dropdownComponentes{
+.dropdownComponentes {
     font-size: 20px;
 }
 
 
 
-.formulario{
+.formulario {
     display: flex;
     padding-right: 30px;
 }
 
-.busqueda{
+.busqueda {
     margin-right: 20px;
 }
 
-.botonBuscar{
+.botonBuscar {
     font-size: 20px;
 }
-

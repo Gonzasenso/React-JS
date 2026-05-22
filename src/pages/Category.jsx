@@ -6,8 +6,8 @@ import { useParams } from "react-router-dom";
 
 const Category = () => {
   const { categoryId } = useParams();
-  const  { products }  = useAllProductsByCategory(categoryId);
-  
+  const { products } = useAllProductsByCategory(categoryId);
+
 
 
   return <ItemListContainer products={products} />;
