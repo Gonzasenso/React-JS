@@ -1,5 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
-import { Inicio } from "../pages/Inicio";
+import { HashRouter, Routes, Route } from "react-router-dom";import { Inicio } from "../pages/Inicio";
 import { ItemListContainer, NavBarComponent } from "../components";
 import { ItemDetailContainer } from "../pages";
 import Category from "../pages/Category";

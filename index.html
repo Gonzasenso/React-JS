@@ -1,13 +1,24 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/mando" href="https://cdn-icons-png.flaticon.com/128/5166/5166323.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GamerXtreme - Tu Tienda Gamer </title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+
+  <script>
+    if (!window.location.hash) {
+      window.location.replace(
+        window.location.pathname + '#/'
+      );
+    }
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>
