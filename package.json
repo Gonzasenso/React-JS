@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gonzasenso.github.io/React-JS/",
+  "homepage": "https://gonzasenso.github.io/Gamerxtreme-Ecommerce/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
