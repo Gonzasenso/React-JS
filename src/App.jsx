@@ -1,18 +1,18 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBarComponent from "./components/NavBarComponent/NavBarComponent";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
+import { MainRouter } from "./router/MainRouter";
 
+import { CartProvider } from "./context";
 
-function App() {
-
+const App = () => {
   return (
     <div>
-      <NavBarComponent />
+      <CartProvider>
+        <MainRouter />
+      </CartProvider>
     </div>
-  )
-
-
-}
+  );
+};
 
 export default App;

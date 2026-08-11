@@ -1,48 +1,46 @@
-import Button from 'react-bootstrap/Button';
-import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidgetComponent from "../CartWidgetComponent/CartWidgetComponent";
+import { Link } from "react-router-dom";
+import estilos from "./NavBar.module.css";
 
-const NavBarComponent= () => {
+
+export const NavBarComponent = () => {
+
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className={estilos.encabezado}>
       <Container fluid>
-        <Navbar.Brand href="#">GamerXtreme</Navbar.Brand>
+        <Navbar.Brand className={estilos.titulo} href="#home"><Link className={estilos.link} to={"/"}>GamerXtreme</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
+            style={{ maxHeight: '100px', paddingLeft: `50px` }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Productos</Nav.Link>
-            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Componentes</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Monitores
+            <Nav.Link className={estilos.botonInicio} style={{ fontSize: `20px` }} href="#Inicio"><Link className={estilos.link} to={"/"} >Inicio</Link></Nav.Link>
+            <NavDropdown className={estilos.botonCategorias} title="Categorias" id="navbarScrollingDropdown">
+
+              <NavDropdown.Item href="#Teclados" className={estilos.dropdownComponentes}>
+                <Link className={estilos.linkCategorias} to={"/category/Teclados"}>Teclados</Link>
               </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Sillas Gamer
+
+              <NavDropdown.Item href="#Monitores" className={estilos.dropdownComponentes}>
+                <Link className={estilos.linkCategorias} to={"/category/Monitores"}>Monitores</Link>
+              </NavDropdown.Item>
+
+              <NavDropdown.Item href="#Auriculares" className={estilos.dropdownComponentes}>
+                <Link className={estilos.linkCategorias} to={"/category/Auriculares"}>Auriculares</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Buscar"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Buscar</Button>
-          </Form>
+          <CartWidgetComponent />
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-}
 
-export default NavBarComponent;
+  );
+};
+
